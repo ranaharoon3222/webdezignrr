@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-size: 60px;
+  font-family: var(--p-font);
+}
+
+h2 {
+  font-size: 40px;
+  font-family: var(--p-font);
+}
+h3 {
+  font-size: 22px;
+  font-family: var(--s-font);
+}
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  width: 90%;
+}
+
+/* .font-space {
+  font-family: var(--p-font);
+}
+.font-play {
+  font-family: var(--s-font);
+} */
+
+@media all and (max-width: 980px) {
+  h1 {
+    font-size: 30px;
+    font-family: var(--p-font);
+  }
+
+  h2 {
+    font-size: 27px;
+    font-family: var(--p-font);
+  }
+}

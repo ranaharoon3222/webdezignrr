@@ -1,0 +1,516 @@
+img {
+  max-width: 100%;
+}
+.secspacing {
+  padding: 50px 0px;
+}
+
+.twocol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.bnnarnav h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+
+  /* identical to box height, or 100% */
+
+  color: #222222;
+}
+.portfoliobox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.idea2box {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 10px;
+}
+.ideabox {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 40px;
+}
+.span-col-2 {
+  grid-column: span 2 / auto;
+  max-width: 150px;
+}
+.idea2f h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: 'Space Grotesk';
+
+  /* identical to box height, or 100% */
+
+  color: #000000;
+}
+.idea2f {
+  max-width: 155px;
+}
+.fimg {
+  max-width: 22px;
+}
+.expertisebox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.newbox h1 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  margin-top: 20px;
+  /* identical to box height, or 100% */
+
+  color: #000000;
+}
+.newbox h2 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 20px;
+  /* identical to box height, or 100% */
+
+  color: #555555;
+}
+.newbox h3 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 20px;
+  /* identical to box height, or 100% */
+
+  color: #000000;
+}
+.newbox h4 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 4px;
+  /* identical to box height, or 114% */
+
+  color: #555555;
+}
+.teambox {
+  background: #ffffff;
+  box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.07);
+  border-radius: 15px;
+  padding: 60px 0px;
+}
+.footer1 h1 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+
+  margin-top: 20px;
+  /* or 100% */
+
+  color: #000000;
+}
+.footer1 h2 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  margin-top: 20px;
+  /* or 100% */
+
+  color: #555555;
+}
+.footerbox {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.grid_form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  padding: 50px 0px;
+}
+
+.form_left {
+  width: 100%;
+  max-width: 300px;
+}
+
+.form_left h1 {
+  color: #002f30;
+  /* max-width: 325px; */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.form_left h2 {
+  color: #002f30;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.form_left p {
+  color: #002f30;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+
+.form_left img {
+  margin: 20px 0px;
+}
+
+.form_left h2 {
+  margin-bottom: 10px;
+}
+
+.form_left h3 {
+  margin-bottom: 10px;
+}
+
+/*  */
+.input input {
+  background: #ffffff;
+  border: 1px solid #999999;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  min-height: 45px;
+  /* identical to box height, or 100% */
+  text-transform: capitalize;
+  margin-top: 13px;
+  color: #555555;
+
+  padding-left: 20px;
+  outline: none;
+
+  width: 100%;
+  max-width: 280px;
+}
+
+.contactForm textarea {
+  padding-left: 20px;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #999999;
+  margin-top: 15px;
+  font-size: 16px;
+
+  color: #555555;
+  width: 100%;
+  max-width: 635px;
+
+  font-weight: 400;
+  padding-top: 5px;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+.contactForm h1 {
+  text-align: center;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  color: #002f30;
+}
+
+.form2Cols {
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 280px;
+  gap: 10px;
+}
+
+.form2Cols input {
+  background: #ffffff;
+  border: 1px solid #999999;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  /* identical to box height, or 100% */
+  text-transform: capitalize;
+
+  color: #555555;
+
+  padding-left: 20px;
+  outline: none;
+
+  min-height: 45px;
+  width: 100%;
+  max-width: 317px;
+  box-shadow: none;
+}
+
+.formRow2 {
+  margin-bottom: 10px;
+}
+
+.respRow {
+  margin-bottom: 10px;
+}
+
+.contactForm h1 {
+  font-size: 27px;
+}
+
+/* Contact Form End*/
+
+@media all and (min-width: 568px) {
+  /* Contact Form mq */
+  .grid_form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 50px 0px;
+  }
+
+  .form_left {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .form_left h1 {
+    color: #002f30;
+    /* max-width: 325px; */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .form_left h2 {
+    color: #002f30;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .form_left p {
+    color: #002f30;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    margin: 10px 0px;
+  }
+
+  .form_left img {
+    margin: 20px 0px;
+  }
+
+  .form_left h2 {
+    margin-bottom: 10px;
+  }
+
+  .form_left h3 {
+    margin-bottom: 10px;
+  }
+
+  /*  */
+  .input input {
+    background: #ffffff;
+    border: 1px solid #999999;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 20px;
+    /* identical to box height, or 100% */
+    text-transform: capitalize;
+
+    color: #555555;
+
+    padding-left: 20px;
+    outline: none;
+
+    width: 100%;
+    max-width: 635px;
+    height: 45px;
+  }
+
+  .contactForm textarea {
+    padding-left: 20px;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #999999;
+
+    font-size: 16px;
+
+    color: #555555;
+    width: 100%;
+    max-width: 635px;
+    margin-top: 20px;
+    font-weight: 400;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    box-shadow: none;
+  }
+
+  .contactForm h1 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    color: #002f30;
+  }
+
+  .form2Cols {
+    display: flex;
+    width: 100%;
+    max-width: 635px;
+    gap: 10px;
+  }
+
+  .form2Cols input {
+    background: #ffffff;
+    border: 1px solid #999999;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 13px;
+    /* identical to box height, or 100% */
+    text-transform: capitalize;
+
+    color: #555555;
+
+    padding-left: 20px;
+    outline: none;
+
+    min-height: 45px;
+    width: 100%;
+    max-width: 317px;
+    box-shadow: none;
+  }
+
+  .formRow2 {
+    margin-bottom: 10px;
+  }
+
+  .respRow {
+    margin-bottom: unset;
+  }
+
+  /* Contact Form mq End */
+}
+
+@media all and (max-width: 768px) {
+  .twocol {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .portfoliobox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ideabox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .idea2 h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .idea2box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span-col-2 {
+    grid-column: span 1 / auto;
+  }
+  .mobilef1 h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .mobilef2 {
+    border-left: none;
+  }
+  .mobilef2 h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .mobilef2 {
+    padding: 0px;
+  }
+  .experttext h1 {
+    font-size: 30px;
+  }
+  .expertisebox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .experf {
+    align-items: baseline;
+  }
+  .project1 h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .project1 {
+    padding: 0px 15px;
+  }
+  .proimg {
+    max-width: 210px;
+    margin: auto;
+  }
+  .teamh {
+    font-size: 30px;
+  }
+  .abouth {
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .contact1 h1 {
+    font-size: 23px;
+    line-height: 32px;
+  }
+  .footerbox {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .smallf h1 {
+    font-size: 13px;
+  }
+  .orangzag {
+    max-width: 88px;
+    top: 312px;
+    right: 48px;
+  }
+  .portfoliomain h2 {
+    font-size: 25px;
+    max-width: 160px;
+    margin-top: 15px;
+  }
+  .portfolioimg {
+    max-width: 135px;
+    margin-top: 2px;
+  }
+  .user input {
+    min-width: 140px;
+    padding: 7px 15px;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 245px;
+    padding: 3px 2px;
+  }
+  .user button {
+    padding: 6px 18px;
+    font-size: 11px;
+  }
+}
