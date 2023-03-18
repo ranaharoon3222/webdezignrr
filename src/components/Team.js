@@ -1,9 +1,47 @@
 import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import styles from './arrow.module.css';
+import { Arrow } from '@components/arrow';
 
 export default () => {
+  const [slides] = useState([
+    {
+      avatar: '',
+      body: '',
+      name: '',
+      title: '',
+    },
+    {
+      avatar: '',
+      body: '',
+      name: '',
+      title: '',
+    },
+    {
+      avatar: '',
+      body: '',
+      name: '',
+      title: '',
+    },
+    {
+      avatar: '',
+      body: '',
+      name: '',
+      title: '',
+    },
+    {
+      avatar: '',
+      body: '',
+      name: '',
+      title: '',
+    },
+    {
+      avatar: '',
+      body: '',
+      name: '',
+      title: '',
+    },
+  ]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -28,7 +66,7 @@ export default () => {
 
   return (
     <>
-      <div class='teamsec secspacing  font-space relative '>
+      <div class='teamsec pt-40  font-space relative '>
         <div class='wrapper '>
           <h1 class=' teamh text-center font-bold md:text-[70px] pb-10 text-black'>
             <span class=' inline-block relative '>
@@ -40,96 +78,32 @@ export default () => {
             our team
           </h1>
 
-          <div className='relative navigation-wrapper'>
+          <div className='relative pb-16 navigation-wrapper'>
             <div ref={sliderRef} className='py-10 keen-slider'>
-              <div className=' keen-slider__slide number-slide1'>
-                <div class='  bg-white shadow-md rounded-xl m-2 py-8'>
-                  <div class=' text-center '>
-                    <div class='nimg max-w-[100px] m-auto '>
-                      <img src='/images/team1.png' alt='' />
-                    </div>
+              {slides.map((item) => {
+                return (
+                  <div className=' keen-slider__slide number-slide1'>
+                    <div class='  bg-white slide-shadow rounded-xl m-4 py-8'>
+                      <div class=' text-center '>
+                        <div class='nimg max-w-[100px] m-auto '>
+                          <img src='/images/team1.png' alt='' />
+                        </div>
 
-                    <h3 className='py-2 pt-5 font-bold font-space'>
-                      Chris Clafford
-                    </h3>
-                    <h4 className='font-space'>Senior colsultant</h4>
-                    <h4 className='pt-2 font-bold font-space'>
-                      Front-End Developer
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div className=' keen-slider__slide number-slide1'>
-                <div class='  bg-white shadow-md rounded-xl m-2 py-8'>
-                  <div class=' text-center '>
-                    <div class='nimg max-w-[100px] m-auto '>
-                      <img src='/images/team1.png' alt='' />
+                        <h3 className='py-2 pt-5 font-bold font-space'>
+                          Chris Clafford
+                        </h3>
+                        <h4 className='font-space'>Senior colsultant</h4>
+                        <h4 className='pt-2 font-bold font-space'>
+                          Front-End Developer
+                        </h4>
+                      </div>
                     </div>
-
-                    <h3 className='py-2 pt-5 font-bold font-space'>
-                      Chris Clafford
-                    </h3>
-                    <h4 className='font-space'>Senior colsultant</h4>
-                    <h4 className='pt-2 font-bold font-space'>
-                      Front-End Developer
-                    </h4>
                   </div>
-                </div>
-              </div>
-              <div className=' keen-slider__slide number-slide1'>
-                <div class='  bg-white shadow-md rounded-xl m-2 py-8'>
-                  <div class=' text-center '>
-                    <div class='nimg max-w-[100px] m-auto '>
-                      <img src='/images/team1.png' alt='' />
-                    </div>
-
-                    <h3 className='py-2 pt-5 font-bold font-space'>
-                      Chris Clafford
-                    </h3>
-                    <h4 className='font-space'>Senior colsultant</h4>
-                    <h4 className='pt-2 font-bold font-space'>
-                      Front-End Developer
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div className=' keen-slider__slide number-slide1'>
-                <div class='  bg-white shadow-md rounded-xl m-2 py-8'>
-                  <div class=' text-center '>
-                    <div class='nimg max-w-[100px] m-auto '>
-                      <img src='/images/team1.png' alt='' />
-                    </div>
-
-                    <h3 className='py-2 pt-5 font-bold font-space'>
-                      Chris Clafford
-                    </h3>
-                    <h4 className='font-space'>Senior colsultant</h4>
-                    <h4 className='pt-2 font-bold font-space'>
-                      Front-End Developer
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div className=' keen-slider__slide number-slide1'>
-                <div class='  bg-white shadow-md rounded-xl m-2 py-8'>
-                  <div class=' text-center '>
-                    <div class='nimg max-w-[100px] m-auto '>
-                      <img src='/images/team1.png' alt='' />
-                    </div>
-
-                    <h3 className='py-2 pt-5 font-bold font-space'>
-                      Chris Clafford
-                    </h3>
-                    <h4 className='font-space'>Senior colsultant</h4>
-                    <h4 className='pt-2 font-bold font-space'>
-                      Front-End Developer
-                    </h4>
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
             {loaded && instanceRef.current && (
-              <>
+              <div className='arrows'>
                 <Arrow
                   left
                   onClick={(e) =>
@@ -147,7 +121,7 @@ export default () => {
                     instanceRef.current.track.details.slides.length - 1
                   }
                 />
-              </>
+              </div>
             )}
           </div>
         </div>
@@ -155,24 +129,3 @@ export default () => {
     </>
   );
 };
-
-function Arrow(props) {
-  const disabeld = props.disabled ? ' arrow--disabled' : '';
-  return (
-    <svg
-      onClick={props.onClick}
-      className={`${styles.arrow} ${
-        props.left ? `${styles.arrow__left}` : `${styles.arrow__right}`
-      } ${disabeld}`}
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
-    >
-      {props.left && (
-        <path d='M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z' />
-      )}
-      {!props.left && (
-        <path d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z' />
-      )}
-    </svg>
-  );
-}

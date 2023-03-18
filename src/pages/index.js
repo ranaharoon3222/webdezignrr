@@ -8,11 +8,13 @@ import Expertise from '@/components/Expertise';
 import Team from '@/components/Team';
 import GotProject from '@/components/GotProject';
 import Review from '@/components/Review';
+import Contact from '@/components/Contact';
+import BannerServices from '@/components/BannerServices';
+
 export default function Home() {
   return (
     <>
       <div>
-        <Navbar />
         <Banner />
         <ServiceSlider />
         <Portfolio />
@@ -22,6 +24,8 @@ export default function Home() {
         <Team />
         <GotProject />
         <Review />
+        <Contact />
+        <BannerServices />
       </div>
     </>
   );
