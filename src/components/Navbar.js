@@ -83,7 +83,7 @@ export default function Navbar() {
         </div>
         <Popover.Group className='hidden lg:flex lg:gap-x-12'>
           <Popover className='relative'>
-            <Popover.Button className='flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1'>
+            <Popover.Button className='flex items-center text-sm font-semibold leading-6 text-gray-900 font-space gap-x-1'>
               Services
               <ChevronDownIcon
                 className='flex-none w-5 h-5 text-gray-400'
@@ -131,7 +131,7 @@ export default function Navbar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
+                      className='flex font-space items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
                     >
                       <item.icon
                         className='flex-none w-5 h-5 text-gray-400'
@@ -145,16 +145,28 @@ export default function Navbar() {
             </Transition>
           </Popover>
 
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='#'
+            className='text-sm font-semibold leading-6 text-gray-900 font-space'
+          >
             Clients
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='#'
+            className='text-sm font-semibold leading-6 text-gray-900 font-space'
+          >
             Portfolio
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='#'
+            className='text-sm font-semibold leading-6 text-gray-900 font-space'
+          >
             Awards
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='#'
+            className='text-sm font-semibold leading-6 text-gray-900 font-space'
+          >
             Contact
           </a>
         </Popover.Group>
