@@ -7,7 +7,7 @@ const ServiceSlider = () => {
   const [images, setImages] = useState([
     {
       titlle: 'Logo & Branding',
-      img: '/images/bnav1.png',
+      img: '/images/bnavlogo.png',
     },
     {
       titlle: 'T-shirt & Merchandise',
@@ -15,35 +15,35 @@ const ServiceSlider = () => {
     },
     {
       titlle: 'Website Design',
-      img: '/images/bnav1.png',
+      img: '/images/bnav2.png',
     },
     {
       titlle: 'Illustrations',
-      img: '/images/bnav1.png',
+      img: '/images/bnav3.png',
     },
     {
       titlle: 'Image Editing',
-      img: '/images/bnav1.png',
+      img: '/images/bnav4.png',
     },
     {
       titlle: 'Social Media Design',
-      img: '/images/bnav1.png',
+      img: '/images/bnav5.png',
+    },
+    {
+      titlle: 'UI Design',
+      img: '/images/uidesign.png',
+    },
+    {
+      titlle: 'Game Design',
+      img: '/images/gamedev.png',
     },
     {
       titlle: 'Web Development',
-      img: '/images/bnav1.png',
+      img: '/images/webdevIco.png',
     },
     {
-      titlle: 'T-shirt & Merchandise',
-      img: '/images/bnav1.png',
-    },
-    {
-      titlle: 'T-shirt & Merchandise',
-      img: '/images/bnav1.png',
-    },
-    {
-      titlle: 'T-shirt & Merchandise',
-      img: '/images/bnav1.png',
+      titlle: 'Android Development',
+      img: '/images/andico.png',
     },
   ]);
   const [sliderRef, instanceRef] = useKeenSlider(
@@ -57,7 +57,7 @@ const ServiceSlider = () => {
   );
 
   return (
-    <div ref={sliderRef} className='px-3 py-4 pb-40 keen-slider'>
+    <div ref={sliderRef} className='px-3 py-4 h-[400px] -mb-52 keen-slider'>
       {images.map((slide, i) => {
         return (
           <div
@@ -66,7 +66,7 @@ const ServiceSlider = () => {
             style={{ flex: '0 0 auto' }}
           >
             <Popover className='relative'>
-              <Popover.Button>
+              <Popover.Button className='outline-none'>
                 <div className='flex items-center'>
                   <img alt='' src={slide.img} />
                   <span className='m-2 font-medium font-space'>
@@ -78,18 +78,51 @@ const ServiceSlider = () => {
               <Popover.Panel className='absolute z-10'>
                 <ul
                   tabindex='0'
-                  class='p-2 mb-3 bg-white border rounded-md shadow dropdown-content menu w-52'
+                  className='relative p-0 mt-3 mb-3 bg-white border rounded-md shadow dropdown-content menu w-52'
                 >
-                  <a href='/account-settings' className='py-2'>
-                    Account settings
+                  <span
+                    className='absolute w-5 h-4 shadow-md left-5 -top-4 bg-[#e5e7eb]'
+                    style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
+                  >
+                    {' '}
+                  </span>
+                  <a
+                    href='/account-settings'
+                    className='p-3 border-b border-gray-200 '
+                  >
+                    HTML & CSS
                   </a>
 
-                  <a href='/account-settings' className='py-2'>
-                    Account settings
+                  <a
+                    href='/account-settings'
+                    className='p-3 border-b border-gray-200'
+                  >
+                    ReactJS
                   </a>
 
-                  <a href='/account-settings' className='py-2'>
-                    Account settings
+                  <a
+                    href='/account-settings'
+                    className='p-3 border-b border-gray-200'
+                  >
+                    Vue JS
+                  </a>
+                  <a
+                    href='/account-settings'
+                    className='p-3 border-b border-gray-200'
+                  >
+                    Angular JS
+                  </a>
+                  <a
+                    href='/account-settings'
+                    className='p-3 border-b border-gray-200'
+                  >
+                    Svelte
+                  </a>
+                  <a
+                    href='/account-settings'
+                    className='p-3 border-b border-gray-200'
+                  >
+                    Backbone.js
                   </a>
                 </ul>
 

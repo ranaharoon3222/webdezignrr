@@ -55,7 +55,11 @@ const Portfolio = () => {
           <div className='grid grid-cols-2 gap-5 lg:grid-cols-4 mt-[30px] sm:mt-[60px]'>
             {images.map((item, i) => {
               return (
-                <div className='' onClick={() => openLightBox(i)}>
+                <div
+                  key={i + Math.random(99999999999)}
+                  className='transition-all cursor-pointer hover:scale-105'
+                  onClick={() => openLightBox(i)}
+                >
                   <img alt='' src={item.src} loading='lazy' />
                 </div>
               );

@@ -76,9 +76,12 @@ const CreativeIdea = () => {
                 with Your Idea
               </h1>
               <div className='flex flex-wrap mt-9'>
-                {badges.map((item) => {
+                {badges.map((item, i) => {
                   return (
-                    <div className='mr-3 mb-5 py-3 text-center justify-center px-4  flex items-center gap-3 bg-[#F8F8F8] rounded-[44px]'>
+                    <div
+                      key={i + Math.random(99999999999)}
+                      className='mr-3 mb-5 py-3 text-center justify-center px-4  flex items-center gap-3 bg-[#F8F8F8] rounded-[44px]'
+                    >
                       <div className='fimg'>
                         <img src={item.img} alt='' />
                       </div>

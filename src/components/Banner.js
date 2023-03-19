@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
   return (
     <div>
-      <div className='bannersec bg-[#1B1A1D]'>
+      <div className='pt-12 bg-[#1B1A1D]'>
         <div className='wrapper'>
           <div className='grid gap-[40px] grid-cols-1 lg:grid-cols-[53%47%] secspacing'>
             <div className='banner1 max-w-[676px] m-auto'>

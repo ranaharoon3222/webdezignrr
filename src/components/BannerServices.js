@@ -60,14 +60,15 @@ export default () => {
 
   return (
     <>
-      <div class='pt-40  font-space relative '>
+      <div className='relative pt-40 font-space '>
         <div className='relative pb-16 navigation-wrapper'>
           <div ref={sliderRef} className='py-10 keen-slider'>
-            {slides.map((item) => {
+            {slides.map((item, i) => {
               return (
                 <div
                   className=' keen-slider__slide number-slide1 !w-auto'
                   style={{ flex: '0 0 auto' }}
+                  key={i}
                 >
                   <div className=''>
                     <img src={item.img} />

@@ -44,6 +44,7 @@ export default () => {
   ]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
+
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: {
       perView: 1,
@@ -66,11 +67,11 @@ export default () => {
 
   return (
     <>
-      <div class='teamsec pt-40  font-space relative '>
-        <div class='wrapper '>
-          <h1 class=' teamh text-center font-bold md:text-[70px] pb-10 text-black'>
-            <span class=' inline-block relative '>
-              <span class='meetp left-[15px] relative inline-block  '>
+      <div className='relative pt-40 teamsec font-space '>
+        <div className='wrapper '>
+          <h1 className=' teamh text-center font-bold md:text-[70px] pb-10 text-black'>
+            <span className='relative inline-block '>
+              <span className='meetp left-[15px] relative inline-block  '>
                 <img src='/images/mp1.png' alt='' />
               </span>
               Meet
@@ -80,12 +81,12 @@ export default () => {
 
           <div className='relative pb-16 navigation-wrapper'>
             <div ref={sliderRef} className='py-10 keen-slider'>
-              {slides.map((item) => {
+              {slides.map((item, i) => {
                 return (
-                  <div className=' keen-slider__slide number-slide1'>
-                    <div class='  bg-white slide-shadow rounded-xl m-4 py-8'>
-                      <div class=' text-center '>
-                        <div class='nimg max-w-[100px] m-auto '>
+                  <div className=' keen-slider__slide number-slide1' key={i}>
+                    <div className='py-8 m-4 bg-white slide-shadow rounded-xl'>
+                      <div className='text-center '>
+                        <div className='nimg max-w-[100px] m-auto '>
                           <img src='/images/team1.png' alt='' />
                         </div>
 

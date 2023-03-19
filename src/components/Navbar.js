@@ -1,12 +1,55 @@
-import { Fragment } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Fragment, useState } from 'react';
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline';
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from '@heroicons/react/20/solid';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+const products = [
+  {
+    name: 'Logo & Branding',
+    description: 'Get a better understanding of your traffic',
+    href: '#',
+    icon: ChartPieIcon,
+  },
+  {
+    name: 'Website Design',
+    description: 'Speak directly to your customers',
+    href: '#',
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: 'Image Editing',
+    description: 'Your customers’ data will be safe and secure',
+    href: '#',
+    icon: FingerPrintIcon,
+  },
+  {
+    name: 'Social Media Design',
+    description: 'Connect with third-party tools',
+    href: '#',
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: 'UI Design',
+    description: 'Build strategic funnels that will convert',
+    href: '#',
+    icon: ArrowPathIcon,
+  },
+];
+const callsToAction = [
+  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+  { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ];
 
 function classNames(...classes) {
@@ -14,155 +57,201 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  return (
-    <Disclosure as='nav' className='bg-gray-800'>
-      {({ open }) => (
-        <>
-          <div className='px-2 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-            <div className='relative flex items-center justify-between h-16'>
-              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
-                {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
-                  <span className='sr-only'>Open main menu</span>
-                  {open ? (
-                    <XMarkIcon className='block w-6 h-6' aria-hidden='true' />
-                  ) : (
-                    <Bars3Icon className='block w-6 h-6' aria-hidden='true' />
-                  )}
-                </Disclosure.Button>
-              </div>
-              <div className='flex items-center justify-center flex-1 sm:items-stretch sm:justify-start'>
-                <div className='flex items-center flex-shrink-0'>
-                  <img
-                    className='block w-auto h-8 lg:hidden'
-                    src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
-                    alt='Your Company'
-                  />
-                  <img
-                    className='hidden w-auto h-8 lg:block'
-                    src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500'
-                    alt='Your Company'
-                  />
-                </div>
-                <div className='hidden sm:ml-6 sm:block'>
-                  <div className='flex space-x-4'>
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
-                <button
-                  type='button'
-                  className='p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
-                >
-                  <span className='sr-only'>View notifications</span>
-                  <BellIcon className='w-6 h-6' aria-hidden='true' />
-                </button>
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-                {/* Profile dropdown */}
-                <Menu as='div' className='relative ml-3'>
-                  <div>
-                    <Menu.Button className='flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
-                      <span className='sr-only'>Open user menu</span>
-                      <img
-                        className='w-8 h-8 rounded-full'
-                        src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                        alt=''
+  return (
+    <header className='bg-white'>
+      <nav
+        className='flex items-center justify-between p-6 mx-auto max-w-7xl lg:px-8'
+        aria-label='Global'
+      >
+        <div className='flex lg:flex-1'>
+          <a href='#' className='-m-1.5 p-1.5 pb-0'>
+            <span className='sr-only'>Your Company</span>
+            <img className='w-auto h-16' src='/images/logoBlack.svg' alt='' />
+          </a>
+        </div>
+        <div className='flex lg:hidden'>
+          <button
+            type='button'
+            className='-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700'
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className='sr-only'>Open main menu</span>
+            <Bars3Icon className='w-6 h-6' aria-hidden='true' />
+          </button>
+        </div>
+        <Popover.Group className='hidden lg:flex lg:gap-x-12'>
+          <Popover className='relative'>
+            <Popover.Button className='flex items-center text-sm font-semibold leading-6 text-gray-900 gap-x-1'>
+              Services
+              <ChevronDownIcon
+                className='flex-none w-5 h-5 text-gray-400'
+                aria-hidden='true'
+              />
+            </Popover.Button>
+
+            <Transition
+              as={Fragment}
+              enter='transition ease-out duration-200'
+              enterFrom='opacity-0 translate-y-1'
+              enterTo='opacity-100 translate-y-0'
+              leave='transition ease-in duration-150'
+              leaveFrom='opacity-100 translate-y-0'
+              leaveTo='opacity-0 translate-y-1'
+            >
+              <Popover.Panel className='absolute z-10 w-screen max-w-md mt-3 overflow-hidden bg-white shadow-lg -left-8 top-full rounded-3xl ring-1 ring-gray-900/5'>
+                <div className='p-4'>
+                  {products.map((item) => (
+                    <div
+                      key={item.name}
+                      className='relative flex items-center p-4 text-sm leading-6 rounded-lg group gap-x-6 hover:bg-gray-50'
+                    >
+                      <div className='flex items-center justify-center flex-none rounded-lg h-11 w-11 bg-gray-50 group-hover:bg-white'>
+                        <item.icon
+                          className='w-6 h-6 text-gray-600 group-hover:text-indigo-600'
+                          aria-hidden='true'
+                        />
+                      </div>
+                      <div className='flex-auto'>
+                        <a
+                          href={item.href}
+                          className='block font-semibold text-gray-900'
+                        >
+                          {item.name}
+                          <span className='absolute inset-0' />
+                        </a>
+                        <p className='mt-1 text-gray-600'>{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className='grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50'>
+                  {callsToAction.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className='flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100'
+                    >
+                      <item.icon
+                        className='flex-none w-5 h-5 text-gray-400'
+                        aria-hidden='true'
                       />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter='transition ease-out duration-100'
-                    enterFrom='transform opacity-0 scale-95'
-                    enterTo='transform opacity-100 scale-100'
-                    leave='transition ease-in duration-75'
-                    leaveFrom='transform opacity-100 scale-100'
-                    leaveTo='transform opacity-0 scale-95'
-                  >
-                    <Menu.Items className='absolute right-0 z-10 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href='#'
-                            className={classNames(
-                              active ? 'bg-gray-100' : '',
-                              'block px-4 py-2 text-sm text-gray-700'
-                            )}
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
+
+          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+            Clients
+          </a>
+          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+            Portfolio
+          </a>
+          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+            Awards
+          </a>
+          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+            Contact
+          </a>
+        </Popover.Group>
+        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
+            <button className='btn'>Start a Project</button>
+          </a>
+        </div>
+      </nav>
+      <Dialog
+        as='div'
+        className='lg:hidden'
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
+        <div className='fixed inset-0 z-10' />
+        <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+          <div className='flex items-center justify-between'>
+            <a href='#' className='-m-1.5 p-1.5'>
+              <span className='sr-only'>Your Company</span>
+              <img
+                className='w-auto h-8'
+                src='https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600'
+                alt=''
+              />
+            </a>
+            <button
+              type='button'
+              className='-m-2.5 rounded-md p-2.5 text-gray-700'
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className='sr-only'>Close menu</span>
+              <XMarkIcon className='w-6 h-6' aria-hidden='true' />
+            </button>
+          </div>
+          <div className='flow-root mt-6'>
+            <div className='-my-6 divide-y divide-gray-500/10'>
+              <div className='py-6 space-y-2'>
+                <Disclosure as='div' className='-mx-3'>
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button className='flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-50'>
+                        Services
+                        <ChevronDownIcon
+                          className={classNames(
+                            open ? 'rotate-180' : '',
+                            'h-5 w-5 flex-none'
+                          )}
+                          aria-hidden='true'
+                        />
+                      </Disclosure.Button>
+                      <Disclosure.Panel className='mt-2 space-y-2'>
+                        {[...products, ...callsToAction].map((item) => (
+                          <Disclosure.Button
+                            key={item.name}
+                            as='a'
+                            href={item.href}
+                            className='block py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50'
                           >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href='#'
-                            className={classNames(
-                              active ? 'bg-gray-100' : '',
-                              'block px-4 py-2 text-sm text-gray-700'
-                            )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href='#'
-                            className={classNames(
-                              active ? 'bg-gray-100' : '',
-                              'block px-4 py-2 text-sm text-gray-700'
-                            )}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
+                            {item.name}
+                          </Disclosure.Button>
+                        ))}
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+                <a
+                  href='#'
+                  className='block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50'
+                >
+                  Clients
+                </a>
+                <a
+                  href='#'
+                  className='block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50'
+                >
+                  Portfolio
+                </a>
+                <a
+                  href='#'
+                  className='block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50'
+                >
+                  Contact
+                </a>
+              </div>
+              <div className='py-6'>
+                <a
+                  href='#'
+                  className='-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 '
+                >
+                  <button className='btn'>Start a Project</button>
+                </a>
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel className='sm:hidden'>
-            <div className='px-2 pt-2 pb-3 space-y-1'>
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as='a'
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? 'bg-gray-900 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
-                  )}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+        </Dialog.Panel>
+      </Dialog>
+    </header>
   );
 }

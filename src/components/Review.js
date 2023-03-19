@@ -81,17 +81,20 @@ export default () => {
 
           <div className='relative navigation-wrapper'>
             <div ref={sliderRef} className='py-10 pt-28 keen-slider'>
-              {reviews.map((item) => {
+              {reviews.map((item, i) => {
                 return (
-                  <div className=' keen-slider__slide number-slide1 !overflow-visible'>
-                    <div class='py-8 pt-0 m-4 px-4 bg-white slide-shadow  rounded-xl'>
-                      <div class=' max-w-[90px] relative -top-8 -mb-8'>
+                  <div
+                    className=' keen-slider__slide number-slide1 !overflow-visible'
+                    key={i}
+                  >
+                    <div className='px-4 py-8 pt-0 m-4 bg-white slide-shadow rounded-xl'>
+                      <div className=' max-w-[90px] relative -top-8 -mb-8'>
                         <img
                           src='/images/team1.png'
                           className='border-2 border-[#ed5d79] rounded-full'
                           alt=''
                         />
-                        <div class='starb max-w-[90px] mt-4'>
+                        <div className='starb max-w-[90px] mt-4'>
                           <img src='/images/aboutstars.png' alt='' />
                         </div>
                       </div>
