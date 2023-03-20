@@ -27,7 +27,7 @@ const Contact = () => {
             </h1>
             <div className=' mt-7'>
               <div className='flex flex-wrap -ml-4 md:flex-nowrap'>
-                <div className='w-full ml-4 '>
+                <div className='w-full mb-4 ml-4 md:mb-0'>
                   <input
                     type='text'
                     placeholder='Your Name'
@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className='flex flex-wrap mt-4 -ml-4 md:flex-nowrap'>
-                <div className='w-full ml-4 '>
+                <div className='w-full mb-4 ml-4 md:mb-0 '>
                   <input
                     type='text'
                     placeholder='Phone Number'
