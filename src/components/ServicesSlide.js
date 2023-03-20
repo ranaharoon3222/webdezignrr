@@ -48,7 +48,7 @@ const ServiceSlider = () => {
   ]);
   const [sliderRef, instanceRef] = useKeenSlider(
     {
-      loop: false,
+      loop: true,
       slides: { perView: 'auto', spacing: 10 },
     },
     [
