@@ -45,7 +45,9 @@ export default () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
+    loop: {
+      min: 10,
+    },
     mode: 'free-snap',
     slides: {
       perView: 'auto',
