@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import { Arrow } from '@components/arrow';
+import Image from 'next/image';
 
 export default () => {
   const [slides] = useState([
@@ -75,7 +76,7 @@ export default () => {
                   key={i}
                 >
                   <div className=''>
-                    <img src={item.img} />
+                    <Image src={item.img} width={300} height={200} />
                   </div>
                 </div>
               );
