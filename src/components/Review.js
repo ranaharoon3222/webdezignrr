@@ -68,16 +68,17 @@ export default () => {
     <>
       <div className='aboutsec py-[100px]  relative  '>
         <div className='wrapper'>
-          <h1 className=' abouth font-space font-bold text-[65px] text-black max-w-[580px] leading-[82px]'>
-            What peoples{' '}
-            <span className='relative inline-block '>
-              <span className='abp left-[110px] relative top-[75px] '>
-                <img src='/images/aboutzig.png' alt='' />
-              </span>
-              Say
-            </span>{' '}
-            about us
+          <h1 className=' relative font-space font-bold md:text-[65px] text-black max-w-[580px] md:leading-[82px]'>
+            What peoples Say
+            <span className='abp absolute md:right-[-85px] -z-10  right-[30px] md:top-[-30px] '>
+              <img
+                src='/images/aboutzig.png'
+                className='max-w-[50px] md:max-w-[100%]'
+                alt=''
+              />
+            </span>
           </h1>
+          <h1 className='font-bold font-space '>about us</h1>
 
           <div className='relative navigation-wrapper'>
             <div ref={sliderRef} className='py-10 pt-28 keen-slider'>

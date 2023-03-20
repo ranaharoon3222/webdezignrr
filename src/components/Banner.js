@@ -7,7 +7,7 @@ const Banner = () => {
         <div className='wrapper'>
           <div className='grid gap-[40px] grid-cols-1 lg:grid-cols-[53%47%] secspacing'>
             <div className='banner1 max-w-[676px] m-auto'>
-              <h2 className='font-bold text-center text-white capitalize'>
+              <h2 className='font-bold text-center text-white capitalize font-space'>
                 We build creative brands
               </h2>
               <h3 className='text-center mt-[8px] font-play text-white uppercase font-normal'>

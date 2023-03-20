@@ -25,39 +25,54 @@ const Contact = () => {
             <h1 className=' font-medium text-[25px] text-black '>
               Send A Message
             </h1>
-            <div className='contactForm mt-7 '>
-              <div className='form2Cols formRow2'>
-                <input
-                  className='respRow'
-                  type='text'
-                  placeholder='Your Name'
-                />
-                <input type='email' placeholder='Email Address' />
+            <div className=' mt-7'>
+              <div className='flex flex-wrap -ml-4 md:flex-nowrap'>
+                <div className='w-full ml-4 '>
+                  <input
+                    type='text'
+                    placeholder='Your Name'
+                    className='w-full input input-bordered'
+                  />
+                </div>
+                <div className='w-full ml-4 '>
+                  <input
+                    type='email'
+                    placeholder='Email Address'
+                    className='w-full input input-bordered'
+                  />
+                </div>
               </div>
-              <div className='form2Cols'>
-                <input
-                  className='respRow'
-                  type='number'
-                  placeholder='Phone Number'
-                />
-                <input type='text' placeholder='Subject' />
+              <div className='flex flex-wrap mt-4 -ml-4 md:flex-nowrap'>
+                <div className='w-full ml-4 '>
+                  <input
+                    type='text'
+                    placeholder='Phone Number'
+                    className='w-full input input-bordered'
+                  />
+                </div>
+                <div className='w-full ml-4 '>
+                  <input
+                    type='text'
+                    placeholder='Subject'
+                    className='w-full input input-bordered'
+                  />
+                </div>
               </div>
-              <div className='mt-5'>
+              <div className='w-full mt-5 '>
                 <input
                   type='text'
-                  placeholder='Type here'
+                  placeholder='what`s Your Budget?'
                   className='w-full input input-bordered'
                 />
               </div>
-              <textarea
-                placeholder='Message'
-                name=''
-                id=''
-                cols={30}
-                rows={5}
-                defaultValue={''}
-              />
-              <a href=''>
+              <div className='mt-4'>
+                <textarea
+                  className='w-full textarea textarea-bordered'
+                  placeholder='Message'
+                ></textarea>
+              </div>
+
+              <a href='' className=''>
                 <div className='btnbox mt-[15px] sm:mt-8 justify-center flex items-center gap-2 w-[152px] h-[60px] rounded-lg border border-solid border-black '>
                   <div className='plane'>
                     <img src='/images/plane.png' alt='' />

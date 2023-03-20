@@ -71,8 +71,12 @@ export default () => {
         <div className='wrapper '>
           <h1 className=' teamh text-center font-bold md:text-[70px] pb-10 text-black'>
             <span className='relative inline-block '>
-              <span className='meetp left-[15px] relative inline-block  '>
-                <img src='/images/mp1.png' alt='' />
+              <span className='absolute  meetp md:left-[-114px] left-[-50px] top-[-15px] inline-block  '>
+                <img
+                  src='/images/mp1.png'
+                  className='md:max-w-[100%]  max-w-[50px]'
+                  alt=''
+                />
               </span>
               Meet
             </span>{' '}

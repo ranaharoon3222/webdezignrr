@@ -8,10 +8,7 @@ const Footer = () => {
           <div className='flex flex-wrap -mx-4'>
             <div className='w-full px-4 sm:w-2/3 lg:w-3/12'>
               <div className='w-full mb-10'>
-                <a
-                  href='javascript:void(0)'
-                  className='mb-6 inline-block max-w-[160px]'
-                >
+                <a href='' className='mb-6 inline-block max-w-[160px]'>
                   <img
                     src='/images/logoBlack.svg'
                     alt='logo'
@@ -47,7 +44,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       SaaS Development
@@ -55,7 +52,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Our Products
@@ -63,7 +60,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       User Flow
@@ -71,7 +68,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       User Strategy
@@ -88,7 +85,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       About TailGrids
@@ -96,7 +93,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Contact &amp; Support
@@ -104,7 +101,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Success History
@@ -112,7 +109,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Setting &amp; Privacy
@@ -129,7 +126,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Premium Support
@@ -137,7 +134,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Our Services
@@ -145,7 +142,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Know Our Team
@@ -153,7 +150,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href='javascript:void(0)'
+                      href=''
                       className='inline-block mb-2 text-base leading-loose text-body-color hover:text-primary'
                     >
                       Download App
@@ -169,7 +166,7 @@ const Footer = () => {
                 </h4>
                 <div className='flex items-center mb-6'>
                   <a
-                    href='javascript:void(0)'
+                    href=''
                     className='text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4'
                   >
                     <svg
@@ -182,7 +179,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href='javascript:void(0)'
+                    href=''
                     className='text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4'
                   >
                     <svg
@@ -195,7 +192,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href='javascript:void(0)'
+                    href=''
                     className='text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4'
                   >
                     <svg
@@ -208,7 +205,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href='javascript:void(0)'
+                    href=''
                     className='text-dark hover:bg-primary hover:border-primary mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] hover:text-white sm:mr-4 lg:mr-3 xl:mr-4'
                   >
                     <svg

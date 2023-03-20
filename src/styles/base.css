@@ -28,7 +28,7 @@ h3 {
   font-family: var(--s-font);
 } */
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 768px) {
   h1 {
     font-size: 30px;
     font-family: var(--p-font);

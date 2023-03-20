@@ -29,7 +29,7 @@ const Portfolio = () => {
   };
   return (
     <div>
-      <div className='portfoliosec '>
+      <div className='pb-10 md-pb-0 portfoliosec '>
         <Lightbox
           open={open}
           index={slideIndex}
@@ -39,7 +39,7 @@ const Portfolio = () => {
         />
         <div className='wrapper'>
           <div className='portfoliomain max-w-[1000px] m-auto'>
-            <h1 className='font-space font-bold text-black text-[18px] sm:text-[70px] text-center'>
+            <h1 className='font-space font-bold text-black  sm:text-[70px] text-center'>
               What do you need{' '}
               <span className='text-transparent bg-gradient-to-r from-[#ED5F78] to-[#FABC1C] bg-[#ED5F78] bg-clip-text fill-transparent'>
                 designed?
@@ -48,7 +48,7 @@ const Portfolio = () => {
             <h2 className='font-space   mt-6 font-bold text-black max-w-[255px] m-auto'>
               Our Portfolio
             </h2>
-            <div className='portfolioimg mt-[5px] text-center max-w-[245px] m-auto'>
+            <div className='portfolioimg mt-[5px] text-center max-w-[120px] md:max-w-[245px] m-auto'>
               <img src='/images/zigzag.png' alt='' />
             </div>
           </div>

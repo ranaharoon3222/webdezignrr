@@ -9,8 +9,12 @@ const Expertise = () => {
             <h1 className=' font-space font-bold text-[70px] text-black'>
               {' '}
               <span className='relative inline-block '>
-                <span className='exprint left-[45px] relative inline-block '>
-                  <img src='/images/exprint.png' alt='' />
+                <span className='exprint absolute md:left-[-52px]  top-[-15px] left-[-25px]  inline-block '>
+                  <img
+                    src='/images/exprint.png'
+                    className='max-w-[40px] md:max-w-[100%]'
+                    alt=''
+                  />
                 </span>
                 Our{' '}
               </span>{' '}
